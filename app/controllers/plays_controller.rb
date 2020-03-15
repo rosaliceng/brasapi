@@ -1,14 +1,14 @@
 class PlaysController < ApplicationController
 
   def index
-    round = params[:page]
+    round = request.params[:round]
     plays = Play.where(:round=>round).as_json(:include=>[:teams=>{except: [:created_at,:updated_at]}],:except=> [:created_at,:updated_at])
 
     render json: {plays: plays, total_pages: 2, current_page: round.to_i}
   end
 
   def show
-    case params[:id].to_i
+    case request.params[:playid].to_i
     when 1
       play1()
     when 2
