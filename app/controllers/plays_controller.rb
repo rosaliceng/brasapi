@@ -10,19 +10,20 @@ class PlaysController < ApplicationController
   def show
     case request.params[:playid].to_i
     when 1
-      render JSON.parse(play1())
+      puts (JSON.parse(play1()))
+      render json: JSON.parse(play1())
     when 2
-      render JSON.parse(play2())
+      render json: JSON.parse(play2())
     when 3
       render json: {"steps": []}
     when 4
-      render JSON.parse(play4())
+      render json: JSON.parse(play4())
     when 7
-      render JSON.parse(play7())
+      render json: JSON.parse(play7())
     when 10
-      render JSON.parse(play10())
+      render json: JSON.parse(play10())
     when 15
-      render JSON.parse(play15())
+      render json: JSON.parse(play15())
     else
       render json: {"steps": []}
     end
