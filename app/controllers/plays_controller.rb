@@ -10,19 +10,19 @@ class PlaysController < ApplicationController
   def show
     case request.params[:playid].to_i
     when 1
-      play1()
+      render JSON.parse(play1())
     when 2
-      play2()
+      render JSON.parse(play2())
     when 3
       render json: {"steps": []}
     when 4
-      play4()
+      render JSON.parse(play4())
     when 7
-      play7()
+      render JSON.parse(play7())
     when 10
-      play10()
+      render JSON.parse(play10())
     when 15
-      play15()
+      render JSON.parse(play15())
     else
       render json: {"steps": []}
     end
@@ -113,7 +113,7 @@ class PlaysController < ApplicationController
         ]
     }
     '
-    render json: json
+    return json
   end
   #sport 0 x 0 internacional
   private
@@ -137,7 +137,7 @@ class PlaysController < ApplicationController
         ]
     }
     '
-    render json: json
+    return json
   end
   #atletico Mineiro 1 x 1 coritiba
   private
@@ -198,7 +198,7 @@ class PlaysController < ApplicationController
         ]
     }
     '
-    render json: json
+    return json
   end
   #flamengo 2 x 0 corinthians
   private
@@ -273,7 +273,7 @@ class PlaysController < ApplicationController
         ]
     }
     '
-    render json: json
+    return json
   end
   #santos 1 x 1 ceara
   private
@@ -334,7 +334,7 @@ class PlaysController < ApplicationController
         ]
     }
     '
-    render json: json
+    return json
   end
 
   #vasco 1 x 0 sport
@@ -358,6 +358,6 @@ class PlaysController < ApplicationController
         ]
     }
     '
-    render json: json
+    return json
   end
 end
