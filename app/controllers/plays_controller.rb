@@ -15,7 +15,7 @@ class PlaysController < ApplicationController
     when 2
       render json: JSON.parse(play2())
     when 3
-      render json: {"steps": []}
+      render json: JSON.parse(playDefault())
     when 4
       render json: JSON.parse(play4())
     when 7
@@ -25,8 +25,28 @@ class PlaysController < ApplicationController
     when 15
       render json: JSON.parse(play15())
     else
-      render json: {"steps": []}
+      render json: JSON.parse(playDefault())
     end
+  end
+
+  private
+  def playDefault
+  json = '
+  {"steps":[
+           {
+              "id": null,
+              "play_id":null,
+              "team_id": null,
+              "at":null,
+              "interval":null,
+              "goal":null,
+              "foul": null,
+              "penalty": null,
+              "sub": null
+          }
+        ]
+      }'
+      return json
   end
   #vasco 2 x 1 avai
   private
