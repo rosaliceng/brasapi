@@ -75,7 +75,7 @@ class PlaysController < ApplicationController
                "goal":null,
                "foul": {
                  "player": "Arnaldo",
-                 "card": null
+                 "card": [{"type": "yellow"}]
                },
                "penalty":null,
                "sub": null
@@ -187,7 +187,7 @@ class PlaysController < ApplicationController
                "goal":null,
                "foul": {
                  "player": "Gionanni",
-                 "card": null
+                 "card": [{"type": "yellow"}]
                },
                "penalty":null,
                "sub": null
@@ -248,7 +248,7 @@ class PlaysController < ApplicationController
              "goal": null,
              "foul": {
                "player": "Thiago Maia",
-               "card": null
+               "card": [{"type": "yellow"}]
              },
              "penalty": null,
              "sub": null
@@ -262,7 +262,7 @@ class PlaysController < ApplicationController
             "goal": null,
             "foul": {
               "player": "Thiago Maia",
-              "card": {"type": "yellow"}
+              "card": [{"type": "yellow"}]
             },
             "penalty": null,
             "sub": null
