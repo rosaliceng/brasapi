@@ -1,24 +1,9 @@
 # README
+API criada para teste iOS para vaga no Globo Esporte
+*Ela retorna status de jogos 
+*Permite fazer pesquisas 
+*Criar um banco de dados 
+*Possibilita executar diversos testes
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
